@@ -10,7 +10,7 @@ function simuParams = scenarioTimeDivisionDuplex()
     rng('default')
     
     %% Simulation Time
-    numFrames = 1; % Number of radio frames (10 ms)
+    numFrames = 10; % Number of radio frames (10 ms)
     
     %% Base Station
     % Initialize bs
@@ -24,8 +24,8 @@ function simuParams = scenarioTimeDivisionDuplex()
     bs.tddPattern       = ["D" "D" "D" "S" "U"]; % TDD pattern
     bs.specialSlot      = [10 2 2];              % TDD special/flexible slot
     bs.txAntSize        = [8 8 1];               % transmission antenna panel
-    bs.rxComAntSize     = [8 4 1];               % reception antenna panel for communication
-    bs.rxSenAntSize     = [8 4 1];               % reception antenna panel for sensing
+    bs.rxComAntSize     = [8 8 1];               % reception antenna panel for communication
+    bs.rxSenAntSize     = [8 8 1];               % reception antenna panel for sensing
     bs.estAlgorithm     = 'FFT';                 % estimation algorithm
     bs.Pfa              = 1e-9;                  % false alarm rate
     bs.cfarEstZone      = [50 500; -20 20];      % [a b; c d], a to b m, c to d m/s
